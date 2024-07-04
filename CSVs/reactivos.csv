@@ -1,0 +1,101 @@
+id,nombre,tipo,costo
+1,"Nitrato de plata",Otro,71656.00
+2,"Solución Buffer pH 7",Otro,46398.07
+3,"Solución Buffer pH 7","Agua Jabonosa",56402.81
+4,"Yoduro de potasio",Otro,88544.75
+5,"Sulfato de cobre",Alcohol,41162.12
+6,"Sulfato de cobre",Alcohol,72231.97
+7,"Yoduro de potasio","Agua Jabonosa",15829.37
+8,"Nitrato de plata",Otro,84684.39
+9,"Nitrato de plata",Alcohol,67802.84
+10,"Solución Buffer pH 7",Otro,39338.07
+11,"Sulfato de cobre","Agua Jabonosa",91135.36
+12,"Nitrato de plata",Alcohol,31471.39
+13,"Yoduro de potasio",Alcohol,73518.28
+14,"Solución Buffer pH 7","Agua Jabonosa",24360.09
+15,"Cloruro de sodio","Agua Jabonosa",63676.92
+16,"Cloruro de sodio","Agua Jabonosa",52787.31
+17,"Yoduro de potasio",Otro,73405.28
+18,"Nitrato de plata","Agua Jabonosa",23107.08
+19,"Nitrato de plata",Otro,55851.30
+20,"Yoduro de potasio",Otro,97044.06
+21,"Nitrato de plata","Agua Jabonosa",44287.89
+22,"Solución Buffer pH 7","Agua Jabonosa",17265.05
+23,"Cloruro de sodio",Alcohol,81537.86
+24,"Cloruro de sodio",Alcohol,60292.77
+25,"Yoduro de potasio","Agua Jabonosa",52473.21
+26,"Yoduro de potasio",Otro,26389.08
+27,"Solución Buffer pH 7",Otro,23384.58
+28,"Nitrato de plata",Otro,21686.15
+29,"Yoduro de potasio",Otro,56217.04
+30,"Solución Buffer pH 7","Agua Jabonosa",35278.63
+31,"Cloruro de sodio","Agua Jabonosa",29694.03
+32,"Sulfato de cobre",Otro,69219.07
+33,"Yoduro de potasio",Alcohol,41330.33
+34,"Solución Buffer pH 7","Agua Jabonosa",57207.43
+35,"Cloruro de sodio",Otro,31641.04
+36,"Yoduro de potasio",Otro,72173.81
+37,"Nitrato de plata","Agua Jabonosa",32145.95
+38,"Cloruro de sodio",Alcohol,46525.77
+39,"Nitrato de plata","Agua Jabonosa",98838.10
+40,"Nitrato de plata",Alcohol,16655.71
+41,"Cloruro de sodio","Agua Jabonosa",80144.70
+42,"Cloruro de sodio","Agua Jabonosa",93752.38
+43,"Nitrato de plata","Agua Jabonosa",16488.00
+44,"Sulfato de cobre",Alcohol,35662.36
+45,"Yoduro de potasio",Otro,11673.02
+46,"Cloruro de sodio",Otro,99991.42
+47,"Sulfato de cobre",Otro,92709.27
+48,"Nitrato de plata","Agua Jabonosa",70950.54
+49,"Solución Buffer pH 7","Agua Jabonosa",87158.18
+50,"Cloruro de sodio",Alcohol,96289.27
+51,"Cloruro de sodio",Otro,93574.20
+52,"Cloruro de sodio",Alcohol,48094.54
+53,"Cloruro de sodio",Otro,68580.32
+54,"Sulfato de cobre",Otro,29338.69
+55,"Solución Buffer pH 7",Otro,73913.49
+56,"Yoduro de potasio","Agua Jabonosa",47436.59
+57,"Solución Buffer pH 7","Agua Jabonosa",93936.46
+58,"Nitrato de plata",Otro,48807.26
+59,"Sulfato de cobre",Otro,17094.58
+60,"Sulfato de cobre",Otro,14095.66
+61,"Yoduro de potasio",Otro,25178.28
+62,"Sulfato de cobre","Agua Jabonosa",29782.50
+63,"Sulfato de cobre",Alcohol,67419.79
+64,"Yoduro de potasio","Agua Jabonosa",74423.06
+65,"Yoduro de potasio",Otro,61970.59
+66,"Sulfato de cobre","Agua Jabonosa",21419.02
+67,"Nitrato de plata",Otro,46929.17
+68,"Yoduro de potasio",Alcohol,61753.74
+69,"Nitrato de plata",Otro,45282.57
+70,"Solución Buffer pH 7","Agua Jabonosa",49743.03
+71,"Solución Buffer pH 7",Otro,80345.48
+72,"Sulfato de cobre",Otro,99134.92
+73,"Yoduro de potasio",Otro,80296.65
+74,"Cloruro de sodio","Agua Jabonosa",31082.77
+75,"Nitrato de plata",Alcohol,44709.26
+76,"Solución Buffer pH 7",Alcohol,12794.91
+77,"Solución Buffer pH 7",Otro,80633.51
+78,"Cloruro de sodio",Alcohol,96841.68
+79,"Solución Buffer pH 7",Otro,50871.37
+80,"Cloruro de sodio",Otro,82498.10
+81,"Nitrato de plata",Otro,28081.81
+82,"Nitrato de plata",Otro,19615.13
+83,"Sulfato de cobre",Alcohol,72762.42
+84,"Nitrato de plata","Agua Jabonosa",78360.60
+85,"Cloruro de sodio",Otro,79555.67
+86,"Nitrato de plata",Otro,69088.17
+87,"Sulfato de cobre",Otro,12059.25
+88,"Solución Buffer pH 7",Otro,74556.08
+89,"Cloruro de sodio",Alcohol,49675.56
+90,"Nitrato de plata","Agua Jabonosa",64248.89
+91,"Solución Buffer pH 7",Otro,29682.15
+92,"Yoduro de potasio",Otro,37232.72
+93,"Solución Buffer pH 7",Alcohol,20001.96
+94,"Nitrato de plata",Otro,46747.43
+95,"Yoduro de potasio","Agua Jabonosa",80224.08
+96,"Sulfato de cobre",Alcohol,78811.40
+97,"Sulfato de cobre","Agua Jabonosa",84852.98
+98,"Sulfato de cobre",Otro,25509.80
+99,"Nitrato de plata","Agua Jabonosa",79627.14
+100,"Yoduro de potasio","Agua Jabonosa",47471.40

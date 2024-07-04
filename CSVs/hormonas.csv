@@ -1,0 +1,101 @@
+id,nombre,tipo,costo
+1,"Etileno ETX",Otro,93257.77
+2,"Giberelina G3",Otro,32465.43
+3,"Etileno ETX",Multiplicación,79797.01
+4,"Citoquinina CK5",Enraizamiento,79615.14
+5,"Giberelina G3",Multiplicación,69274.17
+6,"Auxina X100",Otro,92181.62
+7,"Giberelina G3",Multiplicación,83473.60
+8,"Citoquinina CK5",Enraizamiento,30571.75
+9,"Citoquinina CK5",Multiplicación,49996.33
+10,"Etileno ETX",Multiplicación,96460.80
+11,"Etileno ETX",Otro,51135.57
+12,"Ácido abscísico ABA1",Enraizamiento,68941.32
+13,"Giberelina G3",Enraizamiento,94033.52
+14,"Ácido abscísico ABA1",Enraizamiento,26257.87
+15,"Citoquinina CK5",Otro,48820.39
+16,"Etileno ETX",Enraizamiento,86691.57
+17,"Auxina X100",Otro,49872.00
+18,"Giberelina G3",Otro,59978.33
+19,"Auxina X100",Multiplicación,94657.33
+20,"Giberelina G3",Multiplicación,23745.79
+21,"Etileno ETX",Multiplicación,90014.42
+22,"Auxina X100",Otro,80354.86
+23,"Ácido abscísico ABA1",Enraizamiento,87864.54
+24,"Giberelina G3",Enraizamiento,40500.61
+25,"Citoquinina CK5",Multiplicación,24209.27
+26,"Citoquinina CK5",Otro,97992.58
+27,"Giberelina G3",Multiplicación,93137.22
+28,"Citoquinina CK5",Otro,96159.60
+29,"Etileno ETX",Multiplicación,99147.98
+30,"Etileno ETX",Enraizamiento,59102.60
+31,"Citoquinina CK5",Otro,18169.66
+32,"Citoquinina CK5",Enraizamiento,25944.48
+33,"Auxina X100",Otro,42235.27
+34,"Citoquinina CK5",Otro,47983.85
+35,"Ácido abscísico ABA1",Multiplicación,28939.91
+36,"Giberelina G3",Enraizamiento,52115.58
+37,"Auxina X100",Otro,91303.94
+38,"Ácido abscísico ABA1",Multiplicación,27512.17
+39,"Citoquinina CK5",Enraizamiento,28324.36
+40,"Etileno ETX",Multiplicación,40644.71
+41,"Ácido abscísico ABA1",Enraizamiento,36699.97
+42,"Ácido abscísico ABA1",Multiplicación,73041.12
+43,"Citoquinina CK5",Enraizamiento,53486.08
+44,"Auxina X100",Multiplicación,36443.57
+45,"Auxina X100",Enraizamiento,76644.84
+46,"Giberelina G3",Enraizamiento,27021.80
+47,"Citoquinina CK5",Multiplicación,79613.61
+48,"Citoquinina CK5",Enraizamiento,10875.65
+49,"Ácido abscísico ABA1",Enraizamiento,66151.75
+50,"Citoquinina CK5",Otro,75829.60
+51,"Etileno ETX",Otro,43528.56
+52,"Citoquinina CK5",Enraizamiento,93689.18
+53,"Giberelina G3",Enraizamiento,66691.82
+54,"Giberelina G3",Enraizamiento,21052.63
+55,"Etileno ETX",Multiplicación,46636.46
+56,"Auxina X100",Enraizamiento,70170.53
+57,"Citoquinina CK5",Enraizamiento,24161.81
+58,"Citoquinina CK5",Enraizamiento,39271.54
+59,"Etileno ETX",Multiplicación,85143.95
+60,"Auxina X100",Otro,67270.02
+61,"Giberelina G3",Multiplicación,50974.12
+62,"Etileno ETX",Multiplicación,13899.51
+63,"Etileno ETX",Otro,84463.12
+64,"Ácido abscísico ABA1",Otro,37794.98
+65,"Giberelina G3",Enraizamiento,94043.72
+66,"Ácido abscísico ABA1",Enraizamiento,29568.00
+67,"Etileno ETX",Multiplicación,16926.38
+68,"Giberelina G3",Otro,41292.07
+69,"Ácido abscísico ABA1",Multiplicación,30399.75
+70,"Etileno ETX",Multiplicación,13235.21
+71,"Ácido abscísico ABA1",Otro,20135.89
+72,"Giberelina G3",Multiplicación,98643.40
+73,"Ácido abscísico ABA1",Otro,32057.41
+74,"Ácido abscísico ABA1",Multiplicación,46123.05
+75,"Etileno ETX",Otro,18451.67
+76,"Auxina X100",Otro,32655.17
+77,"Ácido abscísico ABA1",Enraizamiento,72199.48
+78,"Giberelina G3",Otro,60978.86
+79,"Etileno ETX",Multiplicación,56725.04
+80,"Giberelina G3",Enraizamiento,24513.42
+81,"Ácido abscísico ABA1",Multiplicación,54710.58
+82,"Auxina X100",Enraizamiento,62426.34
+83,"Citoquinina CK5",Multiplicación,24689.48
+84,"Etileno ETX",Multiplicación,67454.35
+85,"Etileno ETX",Multiplicación,87773.41
+86,"Citoquinina CK5",Multiplicación,22849.31
+87,"Etileno ETX",Otro,90106.11
+88,"Ácido abscísico ABA1",Multiplicación,20605.93
+89,"Giberelina G3",Enraizamiento,72351.18
+90,"Giberelina G3",Multiplicación,41741.28
+91,"Giberelina G3",Otro,69799.04
+92,"Auxina X100",Enraizamiento,63273.63
+93,"Ácido abscísico ABA1",Otro,91774.33
+94,"Ácido abscísico ABA1",Otro,37337.57
+95,"Giberelina G3",Enraizamiento,60072.44
+96,"Ácido abscísico ABA1",Otro,59600.47
+97,"Auxina X100",Otro,20686.59
+98,"Citoquinina CK5",Enraizamiento,27867.44
+99,"Ácido abscísico ABA1",Enraizamiento,14176.87
+100,"Citoquinina CK5",Enraizamiento,82037.87
