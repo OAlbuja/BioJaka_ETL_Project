@@ -3,7 +3,6 @@ import pandas as pd
 
 # EXTRACT
 # MYSQL
-# aquí va a ir la extracción de los datos de la base de datos
 from Extract.Extract_MySQL.ext_asignacionPersonal import extraer_asignacion_personal
 from Extract.Extract_MySQL.ext_consumoEnergia import extraer_consumo_energia
 from Extract.Extract_MySQL.ext_fases import extraer_fases
@@ -24,10 +23,14 @@ from Extract.Extract_CSV.ext_reactivos import extraer_reactivos
 # Persistencia
 from Extract.per_staging import persistir_staging
 
+# TRANSFORM
+from Transform.tra_costo_total_produccion import transformar_costo_total_produccion
+from Transform.tra_consumo_energia_fase import transformar_consumo_energia_fase
+from Transform.tra_resumen_produccion_lote import transformar_resumen_produccion_lote, guardar_resumen_produccion_lote
+
 def main():
     try:
         # MYSQL
-        # Extraer datos desde OLTP
         print("Extrayendo datos de AsignacionPersonal desde OLTP")
         asignacion_personal = extraer_asignacion_personal()
         print("Extrayendo datos de ConsumoEnergia desde OLTP")
@@ -83,8 +86,7 @@ def main():
         print("Persistiendo en Staging datos de ServiciosBasicos")
         persistir_staging(servicios_basicos, 'ext_servicios_basicos')
         
-        #CSV
-        # Extraer datos desde CSVs
+        # CSV
         print("Extrayendo datos de hormonas desde CSV")
         hormonas = extraer_hormonas()
         print("Extrayendo datos de reactivos desde CSV")
@@ -95,8 +97,29 @@ def main():
         persistir_staging(hormonas, 'ext_hormonas')
         print("Persistiendo en Staging datos de reactivos")
         persistir_staging(reactivos, 'ext_reactivos')
-        #procesos de transformación de  datos
-        #procesos de carga de datos
+
+        # Procesos de transformación de datos
+        print("Transformando datos para costo total de producción")
+        costo_total_produccion = transformar_costo_total_produccion()
+        print("Datos transformados:")
+        print(costo_total_produccion.head())
+        persistir_staging(costo_total_produccion, 'tra_costo_total_produccion')
+
+        print("Transformando datos para consumo de energía por fase")
+        consumo_energia_fase = transformar_consumo_energia_fase()
+        print("Datos transformados:")
+        print(consumo_energia_fase.head())
+        persistir_staging(consumo_energia_fase, 'tra_consumo_energia_fase')
+
+        # Transformar y guardar datos de resumen de producción por lote
+        resumen_produccion_lote = transformar_resumen_produccion_lote()
+        if resumen_produccion_lote is not None:
+            print("Datos transformados de resumen de producción por lote:")
+            print(resumen_produccion_lote.head())
+            guardar_resumen_produccion_lote(resumen_produccion_lote)
+        
+        
+
     except:
         traceback.print_exc()
     finally:

@@ -31,3 +31,14 @@ CREATE TABLE ext_reactivos (
     costo DECIMAL(10, 2) NOT NULL,
     CHECK (costo >= 0)
 );
+
+USE staging;
+-- Crear la tabla para almacenar los datos transformados
+CREATE TABLE tra_costo_total_produccion (
+    produccion_id INT UNSIGNED,
+    costo_insumos DECIMAL(10, 2),
+    costo_mano_obra DECIMAL(10, 2),
+    costo_servicios DECIMAL(10, 2),
+    costo_total DECIMAL(10, 2),
+    PRIMARY KEY (produccion_id)
+);

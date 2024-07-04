@@ -6,7 +6,7 @@ def transformar_procesos():
     try:
         #------CONEXION------------
         typeS = 'mysql'
-        host = '192.168.1.21' #Direccion host, ejemplo del profe 10.10.10.2
+        host = '10.10.10.2' #Direccion host, ejemplo del profe 10.10.10.2
         port = '3306'
         user = 'dwh' #usuario
         pwd = 'elcaro_4Q' #contraseña

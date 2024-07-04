@@ -6,7 +6,7 @@ def cargar_produccionServicios():
     try:
         #------CONEXION AL STAGING------------
         typeS = 'mysql'
-        host = '192.168.1.21' #Direccion host, ejemplo del profe 10.10.10.2
+        host = '10.10.10.2' #Direccion host, ejemplo del profe 10.10.10.2
         port = '3306'
         user = 'dwh' #usuario
         pwd = 'elcaro_4Q' #contraseña
@@ -23,7 +23,7 @@ def cargar_produccionServicios():
 
         #------CONEXION AL SOR------------
         typeS = 'mysql'
-        host = '192.168.1.21' #Direccion host, ejemplo del profe 10.10.10.2
+        host = '10.10.10.2' #Direccion host, ejemplo del profe 10.10.10.2
         port = '3306'
         user = 'dwh' #usuario
         pwd = 'elcaro_4Q' #contraseña
