@@ -27,6 +27,11 @@ from Extract.per_staging import persistir_staging
 from Transform.tra_costo_total_produccion import transformar_costo_total_produccion
 from Transform.tra_consumo_energia_fase import transformar_consumo_energia_fase
 from Transform.tra_resumen_produccion_lote import transformar_resumen_produccion_lote, guardar_resumen_produccion_lote
+from Transform.tra_insumos import transformar_insumos
+
+# LOAD
+from Load.load_insumos import cargar_insumos
+
 
 def main():
     try:
@@ -98,6 +103,7 @@ def main():
         print("Persistiendo en Staging datos de reactivos")
         persistir_staging(reactivos, 'ext_reactivos')
 
+        # TRANSFORM
         # Procesos de transformación de datos
         print("Transformando datos para costo total de producción")
         costo_total_produccion = transformar_costo_total_produccion()
@@ -118,7 +124,15 @@ def main():
             print(resumen_produccion_lote.head())
             guardar_resumen_produccion_lote(resumen_produccion_lote)
         
+        # Transformar insumos
+        print("Transformando datos de insumos")
+        insumos = transformar_insumos()
+        print("Datos transformados de insumos:")
+        print(insumos.head())
         
+         # LOAD
+        print("Cargando datos de insumos al SOR")
+        cargar_insumos()
 
     except:
         traceback.print_exc()

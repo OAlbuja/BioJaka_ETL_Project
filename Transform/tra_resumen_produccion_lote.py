@@ -1,7 +1,7 @@
 import traceback
-from util.db_connection import Db_Connection
 import pandas as pd
- 
+from util.db_connection import Db_Connection
+
 def transformar_resumen_produccion_lote():
     try:
         #------CONEXION------------
@@ -17,20 +17,22 @@ def transformar_resumen_produccion_lote():
             raise Exception("El tipo de base de datos dado no es válido")
         elif ses_db == -2:
             raise Exception("Error tratando de conectarse a la base de datos ")
-        #--------------------------
+        
         # Transformación de los datos
         sql_stmt = """
         SELECT 
             p.id AS produccion_id,
+            t.tiempo_id,
+            m.maquina_id,
+            ap.personal_id,
+            f.fase_id,
+            pr.proceso_id,
+            pi.medio_id AS insumo_id,  -- Considerando que un insumo_id puede ser un medio, hormona o reactivo
             l.codigo AS lote_codigo,
-            l.planta AS planta,
-            f.nombre AS fase,
-            pr.nombre AS proceso,
-            p.fecha AS fecha_produccion,
-            p.plantas_producidas AS plantas_producidas,
-            SUM(pi.cantidad_usada * COALESCE(m.costo, 0)) AS costo_total_insumos_medios,
-            SUM(pi.cantidad_usada * COALESCE(h.costo, 0)) AS costo_total_insumos_hormonas,
-            SUM(pi.cantidad_usada * COALESCE(r.costo, 0)) AS costo_total_insumos_reactivos,
+            l.planta,
+            p.plantas_producidas,
+            ce.consumo_kwh,
+            SUM(pi.cantidad_usada * COALESCE(i.costo, 0)) AS costo_total_insumos,
             SUM(sb.costo) AS costo_servicios,
             SUM(ap.remuneracion) AS costo_personal
         FROM 
@@ -38,19 +40,31 @@ def transformar_resumen_produccion_lote():
             JOIN ext_lotes l ON p.lote_id = l.id
             JOIN ext_fases f ON p.fase_id = f.id
             JOIN ext_procesos pr ON f.proceso_id = pr.id
-            LEFT JOIN ext_produccion_insumos pi ON p.id = pi.produccion_id
-            LEFT JOIN ext_medios m ON pi.medio_id = m.id
-            LEFT JOIN ext_hormonas h ON pi.medio_id = h.id
-            LEFT JOIN ext_reactivos r ON pi.medio_id = r.id
+            JOIN ext_produccion_insumos pi ON p.id = pi.produccion_id
+            JOIN Dim_Insumos i ON pi.medio_id = i.insumo_id
+            JOIN ext_consumoEnergia ce ON p.id = ce.produccion_id
             LEFT JOIN ext_produccion_servicios ps ON p.id = ps.produccion_id
             LEFT JOIN ext_servicios_basicos sb ON ps.servicio_id = sb.id
             LEFT JOIN ext_produccion_personal pp ON p.id = pp.produccion_id
             LEFT JOIN ext_asignacionPersonal ap ON pp.asignacion_personal_id = ap.id
+            LEFT JOIN Dim_Tiempo t ON DATE(p.fecha) = t.fecha
         GROUP BY 
-            p.id, l.codigo, l.planta, f.nombre, pr.nombre, p.fecha, p.plantas_producidas;
+            p.id, t.tiempo_id, m.maquina_id, ap.personal_id, f.fase_id, pr.proceso_id, pi.medio_id, l.codigo, l.planta, p.plantas_producidas, ce.consumo_kwh;
         """
         tra_resumen_produccion_lote = pd.read_sql(sql_stmt, ses_db)
-        return tra_resumen_produccion_lote
+        
+        # Conexión a la base de datos dimensional
+        db = 'sor'
+        con_db = Db_Connection(typeS, host, port, user, pwd, db)
+        ses_db = con_db.start()
+        if ses_db == -1:
+            raise Exception("El tipo de base de datos dado no es válido")
+        elif ses_db == -2:
+            raise Exception("Error tratando de conectarse a la base de datos ")
+
+        # Guardar los datos transformados en la tabla de hechos
+        tra_resumen_produccion_lote.to_sql('Fact_ProduccionConsumo', con=ses_db, if_exists='replace', index=False)
+        
     except:
         traceback.print_exc()
     finally:
